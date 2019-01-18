@@ -167,6 +167,7 @@ class App extends React.Component {
             </Grid>
           </div>
           <Container fluid style={imageContainer}>
+            <Image hidden src={this.state.images[this.state.index + 1]} />
             <Image fluid>
               <CrossFadeImage src={this.state.images[this.state.index]}/>
             </Image>
