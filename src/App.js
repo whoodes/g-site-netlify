@@ -81,6 +81,10 @@ class App extends React.Component {
       paddingTop: '40px',
     };
 
+    const mobileGridStyle = {
+      paddingBottom: '40px',
+    };
+
     const imageContainer = {
       width: '100%',
     };
@@ -99,6 +103,17 @@ class App extends React.Component {
       height: '340px',
       marginTop: '64px',
       marginBottom: '0',
+    }
+
+    const mobile_bg_bar = {
+      background: '#1B1C1D',
+      height: '464px',
+      marginTop: '64px',
+      marginBottom: '0',
+    }
+
+    const image_bg_bar = {
+      background: '#1B1C1D'
     }
 
     return (
@@ -126,52 +141,100 @@ class App extends React.Component {
               </Grid>
             </div>
           </Responsive>
-          <div style={bg_bar}>
-            <Grid style={gridStyle} container divided='vertically'>
-              <Grid.Row columns={2}>
-                <Grid.Column verticalAlign='middle'>
-                  <Segment inverted>
-                    <List animated divided inverted relaxed>
-                      <List.Item><strong>In Business since 2008</strong></List.Item>
-                      <List.Item><strong>Journeyman Electrician License EJ-8704</strong></List.Item>
-                      <List.Item><strong>Distributions Water Operator D1-023</strong></List.Item>
-                      <List.Item><strong>Insured Commercial General Liability $1,000,000.00</strong></List.Item>
-                      <List.Item><strong>Preventive Maintenance Strategy Development</strong></List.Item>
-                      <List.Item>
-                        <strong>Equipment Criticality Analysis and Operational Risk Assessments</strong>
-                      </List.Item>
-                      <List.Item><strong>DNLR coordination with groundwater usage reporting</strong></List.Item>
-                    </List>
-                  </Segment>
-                </Grid.Column>
-                <Grid.Column verticalAlign='middle'>
-                  <Segment inverted>
-                    <List animated divided inverted relaxed>
-                      <List.Item><strong>Water systems management, reporting</strong></List.Item>
-                      <List.Item><strong>Department of Health and Safe Drinking Water Branch</strong></List.Item>
-                      <List.Item>
-                        <strong>Coordinating water samples and routine coliform bacteria monitoring</strong>
-                      </List.Item>
-                      <List.Item>
-                        <strong>
-                          New installations, electrical motor controls and flow management including meters and valves
-                        </strong>
-                      </List.Item>
-                      <List.Item><strong>Specialize in Maintenance Inspections and Troubleshooting</strong></List.Item>
-                      <List.Item><strong>Root cause failure analysis</strong></List.Item>
-                    </List>
-                  </Segment>
-                </Grid.Column>
-              </Grid.Row>
-              <Grid/>
-            </Grid>
+          <Responsive minWidth={768}>
+            <div style={bg_bar}>
+              <Grid style={gridStyle} container divided='vertically'>
+                <Grid.Row columns={2}>
+                  <Grid.Column verticalAlign='middle'>
+                    <Segment inverted>
+                      <List animated divided inverted relaxed>
+                        <List.Item><strong>In Business since 2008</strong></List.Item>
+                        <List.Item><strong>Journeyman Electrician License EJ-8704</strong></List.Item>
+                        <List.Item><strong>Distributions Water Operator D1-023</strong></List.Item>
+                        <List.Item><strong>Insured Commercial General Liability $1,000,000.00</strong></List.Item>
+                        <List.Item><strong>Preventive Maintenance Strategy Development</strong></List.Item>
+                        <List.Item>
+                          <strong>Equipment Criticality Analysis and Operational Risk Assessments</strong>
+                        </List.Item>
+                        <List.Item><strong>DNLR coordination with groundwater usage reporting</strong></List.Item>
+                      </List>
+                    </Segment>
+                  </Grid.Column>
+                  <Grid.Column verticalAlign='middle'>
+                    <Segment inverted>
+                      <List animated divided inverted relaxed>
+                        <List.Item><strong>Water systems management, reporting</strong></List.Item>
+                        <List.Item><strong>Department of Health and Safe Drinking Water Branch</strong></List.Item>
+                        <List.Item>
+                          <strong>Coordinating water samples and routine coliform bacteria monitoring</strong>
+                        </List.Item>
+                        <List.Item>
+                          <strong>
+                            New installations, electrical motor controls and flow management including meters and valves
+                          </strong>
+                        </List.Item>
+                        <List.Item><strong>Specialize in Maintenance Inspections and
+                          Troubleshooting</strong></List.Item>
+                        <List.Item><strong>Root cause failure analysis</strong></List.Item>
+                      </List>
+                    </Segment>
+                  </Grid.Column>
+                </Grid.Row>
+                <Grid/>
+              </Grid>
+            </div>
+          </Responsive>
+          <Responsive maxWidth={768}>
+            <div style={mobile_bg_bar}>
+              <Grid style={mobileGridStyle} container divided='vertically'>
+                <Grid.Row columns={2}>
+                  <Grid.Column verticalAlign='middle'>
+                    <Segment inverted>
+                      <List divided inverted relaxed>
+                        <List.Item><strong>In Business since 2008</strong></List.Item>
+                        <List.Item><strong>Journeyman Electrician License EJ-8704</strong></List.Item>
+                        <List.Item><strong>Distributions Water Operator D1-023</strong></List.Item>
+                        <List.Item><strong>Insured Commercial General Liability $1,000,000.00</strong></List.Item>
+                        <List.Item><strong>Preventive Maintenance Strategy Development</strong></List.Item>
+                        <List.Item>
+                          <strong>Equipment Criticality Analysis and Operational Risk Assessments</strong>
+                        </List.Item>
+                        <List.Item><strong>DNLR coordination with groundwater usage reporting</strong></List.Item>
+                      </List>
+                    </Segment>
+                  </Grid.Column>
+                  <Grid.Column verticalAlign='middle'>
+                    <Segment inverted>
+                      <List divided inverted relaxed>
+                        <List.Item><strong>Water systems management, reporting</strong></List.Item>
+                        <List.Item><strong>Department of Health and Safe Drinking Water Branch</strong></List.Item>
+                        <List.Item>
+                          <strong>Coordinating water samples and routine coliform bacteria monitoring</strong>
+                        </List.Item>
+                        <List.Item>
+                          <strong>
+                            New installations, electrical motor controls and flow management including meters and valves
+                          </strong>
+                        </List.Item>
+                        <List.Item><strong>Specialize in Maintenance Inspections and
+                          Troubleshooting</strong></List.Item>
+                        <List.Item><strong>Root cause failure analysis</strong></List.Item>
+                      </List>
+                    </Segment>
+                  </Grid.Column>
+                </Grid.Row>
+                <Grid/>
+              </Grid>
+            </div>
+          </Responsive>
+          <div style={image_bg_bar}>
+            <Container fluid style={imageContainer}>
+              <Image hidden src={this.state.images[this.state.index + 1]}/>
+              <Image fluid>
+                <CrossFadeImage src={this.state.images[this.state.index]}/>
+              </Image>
+            </Container>
           </div>
-          <Container fluid style={imageContainer}>
-            <Image hidden src={this.state.images[this.state.index + 1]} />
-            <Image fluid>
-              <CrossFadeImage src={this.state.images[this.state.index]}/>
-            </Image>
-          </Container>
           <Footer/>
         </div>
     );
