@@ -64,6 +64,19 @@ class App extends React.Component {
     this.interval = setInterval(() => this.imageChange(), 2500);
   }
 
+  checkBrowserForSlideShow() {
+    let isSafari = /constructor/i.test(window.HTMLElement) ||
+        (function (p) {
+          return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] ||
+            /* eslint-disable-next-line */
+            (typeof safari !== 'undefined' && safari.pushNotification));
+    if (!isSafari) {
+      return <CrossFadeImage src={this.state.images[this.state.index]}/>
+    } else {
+      return <Image src={this.state.images[this.state.index]}/>
+    }
+  }
+
   componentWillUnmount() {
     clearInterval(this.interval);
   }
@@ -118,21 +131,26 @@ class App extends React.Component {
 
     return (
         <div>
+
           <NavBar/>
+
+          {/* mobile bg */}
           <Responsive maxWidth={768}>
             <style>{'body { background-color: rgba(244, 244, 244, 1) }'}</style>
             <style>{'body { background: url(/images/rome-cover.JPG) no-repeat center center fixed; }'}</style>
-            <style>{'body { background-size: cover; }'}</style>
+            <style>{'body { background-size: fill; }'}</style>
             <div style={mobileLogo}>
               <Grid verticalAlign='middle' container centered>
                 <Image size='medium' src="/images/logo.svg"/>
               </Grid>
             </div>
           </Responsive>
+
+          {/* desktop bg */}
           <Responsive minWidth={768}>
             <style>{'body { background-color: rgba(244, 244, 244, 1) }'}</style>
             <style>{'body { background: url(/images/rome-cover.JPG) no-repeat center center fixed; }'}</style>
-            <style>{'body { background-size: 50% 100%; }'}</style>
+            <style>{'body { background-size: fill; }'}</style>
             <div>
               <Grid style={logoStyle} container centered columns={3}>
                 <Grid.Column>
@@ -141,6 +159,8 @@ class App extends React.Component {
               </Grid>
             </div>
           </Responsive>
+
+          {/* desktop information bar */}
           <Responsive minWidth={768}>
             <div style={bg_bar}>
               <Grid style={gridStyle} container divided='vertically'>
@@ -184,6 +204,8 @@ class App extends React.Component {
               </Grid>
             </div>
           </Responsive>
+
+          {/* mobile information bar */}
           <Responsive maxWidth={768}>
             <div style={mobile_bg_bar}>
               <Grid style={mobileGridStyle} container divided='vertically'>
@@ -227,15 +249,20 @@ class App extends React.Component {
               </Grid>
             </div>
           </Responsive>
+
           <div style={image_bg_bar}>
             <Container fluid style={imageContainer}>
+
+              {/* loads the next image in the list to avoid lag */}
               <Image hidden src={this.state.images[this.state.index + 1]}/>
               <Image fluid>
-                <CrossFadeImage src={this.state.images[this.state.index]}/>
+                {this.checkBrowserForSlideShow()}
               </Image>
             </Container>
           </div>
+
           <Footer/>
+
         </div>
     );
   }

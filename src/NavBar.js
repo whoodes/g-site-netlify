@@ -1,28 +1,60 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { Menu, Header, Dropdown } from 'semantic-ui-react';
+import { Menu, Dropdown, Responsive, Image } from 'semantic-ui-react';
 
 /** The NavBar appears at the top of every page. Rendered by the App Layout component. */
 class NavBar extends React.Component {
   render() {
+
+    function getTrigger() {
+      return <span><Image inverted size='tiny' src='images/logo-white.svg'/></span>
+    }
+
     const menuStyle = {
-      paddingBottom: '32px',
-      paddingTop: '32px',
+      paddingBottom: '8px',
+      paddingTop: '16px',
+      paddingLeft: '32px',
+      paddingRight: '4px'
     };
+
+    const logoStyle = {
+      marginTop: '10px',
+    }
+
     return (
-        <Menu style={menuStyle} attached="top" borderless inverted>
-          <Menu.Item>
-            <Dropdown icon='large bars'>
-              <Dropdown.Menu>
-                <Dropdown.Item>Consulting</Dropdown.Item>
-                <Dropdown.Item>Preventive Maintenance</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-          </Menu.Item>
-          <Menu.Item position='right'>
-            <Header inverted>Free Estimates: 808-780-6369</Header>
-          </Menu.Item>
-        </Menu>
+        <div>
+
+          <Responsive maxWidth={768}>
+            <Menu style={menuStyle} attached="top" borderless inverted>
+              <Menu.Item>
+                <Dropdown trigger={getTrigger()} icon={null}>
+                  <Dropdown.Menu>
+                    <Dropdown.Item>Consulting</Dropdown.Item>
+                    <Dropdown.Item>Preventive Maintenance</Dropdown.Item>
+                    <Dropdown.Item>About</Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+              </Menu.Item>
+            </Menu>
+          </Responsive>
+
+          <Responsive minWidth={768}>
+            <Menu style={menuStyle} attached="top" borderless inverted fitted>
+              <Menu.Item href='google.com'>
+                <strong>Consulting Services</strong>
+              </Menu.Item>
+              <Menu.Item href='google.com'>
+                <strong>Preventative Maintenance</strong>
+              </Menu.Item>
+              <Menu.Item href='google.com'>
+                <strong>About</strong>
+              </Menu.Item>
+              <Menu.Item position='right'>
+                <Image inverted size='tiny' src='images/logo-white.svg'/>
+              </Menu.Item>
+            </Menu>
+          </Responsive>
+
+        </div>
     );
   }
 }
