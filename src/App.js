@@ -43,8 +43,19 @@ class App extends React.Component {
         '/images/IMG_7927.jpeg',
         '/images/IMG_7986.jpeg',
         '/images/IMG_8438.jpeg',
+        '/images/IMG_3417.jpeg',
+        '/images/IMG_3499.jpeg',
+        '/images/IMG_3501.jpeg',
+        '/images/IMG_3593.jpeg',
+        '/images/IMG_3594.jpeg',
+        '/images/IMG_3598.jpeg',
+        '/images/IMG_3611.jpeg',
+        '/images/IMG_3612.jpeg',
+        '/images/IMG_5793.jpeg',
+        '/images/IMG_4464.jpeg',
+        '/images/IMG_1916.jpeg',
       ],
-      index: 0,
+      index: Math.floor(Math.random() * 40),
     };
   }
 

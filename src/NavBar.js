@@ -16,6 +16,13 @@ class NavBar extends React.Component {
       paddingRight: '4px'
     };
 
+    const mobileMenuStyle = {
+      marginTop: '-4px',
+      paddingBottom: '8px',
+      paddingTop: '16px',
+      paddingRight: '4px'
+    };
+
     const logoStyle = {
       marginTop: '10px',
     }
@@ -24,7 +31,7 @@ class NavBar extends React.Component {
         <div>
 
           <Responsive maxWidth={768}>
-            <Menu style={menuStyle} attached="top" borderless inverted>
+            <Menu style={mobileMenuStyle} attached="top" borderless inverted>
               <Menu.Item>
                 <Dropdown trigger={getTrigger()} icon={null}>
                   <Dropdown.Menu>
