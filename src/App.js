@@ -54,18 +54,28 @@ class App extends React.Component {
         '/images/IMG_4464.jpeg',
         '/images/IMG_1916.jpeg',
       ],
-      index: Math.floor(Math.random() * 30),
+      index1: Math.floor(Math.random() * 30),
+      index2: Math.floor(Math.random() * 30),
     };
   }
 
+  setRandomIndex() {
+    this.setState({
+      index1: Math.floor(Math.random() * 30),
+      index2: Math.floor(Math.random() * 30),
+    })
+  }
+
   imageChange() {
-    if (this.state.index === this.state.images.length - 1) {
+    if (this.state.index1 === this.state.images.length - 1 |
+        this.state.index2 === this.state.images.length - 1) {
       this.setState({
-        index: 0,
+        index1: 0,
       });
     } else {
       this.setState(prevState => ({
-        index: prevState.index + 1,
+        index1: prevState.index1 + 1,
+        index2: prevState.index2 + 1,
       }));
     }
   }
@@ -74,16 +84,28 @@ class App extends React.Component {
     this.interval = setInterval(() => this.imageChange(), 2500);
   }
 
-  checkBrowserForSlideShow() {
+  /* Unfortunately, safari doesn't like certain node modules */
+  checkBrowserForSlideShow(index) {
+    const userAgent = window.navigator.userAgent;
     let isSafari = /constructor/i.test(window.HTMLElement) ||
         (function (p) {
           return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] ||
             /* eslint-disable-next-line */
-            (typeof safari !== 'undefined' && safari.pushNotification));
+            (typeof safari !== 'undefined' && safari.pushNotification) ||
+              userAgent.match(/iPad/i) || userAgent.match(/iPhone/i));
+
     if (!isSafari) {
-      return <CrossFadeImage src={this.state.images[this.state.index]}/>
+      if (index === 1) {
+        return <CrossFadeImage src={this.state.images[this.state.index1]}/>
+      } else {
+        return <CrossFadeImage src={this.state.images[this.state.index2]}/>
+      }
     } else {
-      return <Image src={this.state.images[this.state.index]}/>
+      if (index === 1) {
+        return <Image src={this.state.images[this.state.index1]}/>
+      } else {
+        return <Image src={this.state.images[this.state.index2]}/>
+      }
     }
   }
 
@@ -130,8 +152,9 @@ class App extends React.Component {
 
     const mobile_bg_bar = {
       background: '#1B1C1D',
-      height: '464px',
-      marginTop: '64px',
+      height: '400px',
+      paddingTop: '64px',
+      marginTop: '0',
       marginBottom: '0',
     }
 
@@ -219,7 +242,7 @@ class App extends React.Component {
           <Responsive maxWidth={768}>
             <div style={mobile_bg_bar}>
               <Grid style={mobileGridStyle} container divided='vertically'>
-                <Grid.Row columns={2}>
+                <Grid.Row columns={1}>
                   <Grid.Column verticalAlign='middle'>
                     <Segment inverted>
                       <List divided inverted relaxed>
@@ -235,6 +258,26 @@ class App extends React.Component {
                       </List>
                     </Segment>
                   </Grid.Column>
+                </Grid.Row>
+                <Grid/>
+              </Grid>
+            </div>
+
+            {/* First slide-show */}
+            <div style={image_bg_bar}>
+              <Container fluid style={imageContainer}>
+                {/* loads the next image in the list to avoid lag */}
+                <Image hidden src={this.state.images[this.state.index + 1]}/>
+                <Image fluid>
+                  {this.checkBrowserForSlideShow(1)}
+                </Image>
+              </Container>
+            </div>
+
+            {/* Second bg bar */}
+            <div style={mobile_bg_bar}>
+              <Grid style={mobileGridStyle} container divided='vertically'>
+                <Grid.Row columns={1}>
                   <Grid.Column verticalAlign='middle'>
                     <Segment inverted>
                       <List divided inverted relaxed>
@@ -260,13 +303,13 @@ class App extends React.Component {
             </div>
           </Responsive>
 
+          {/* Standard slide-show */}
           <div style={image_bg_bar}>
             <Container fluid style={imageContainer}>
-
               {/* loads the next image in the list to avoid lag */}
               <Image hidden src={this.state.images[this.state.index + 1]}/>
               <Image fluid>
-                {this.checkBrowserForSlideShow()}
+                {this.checkBrowserForSlideShow(2)}
               </Image>
             </Container>
           </div>
