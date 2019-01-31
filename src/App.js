@@ -86,15 +86,17 @@ class App extends React.Component {
 
   /* Unfortunately, safari doesn't like certain node modules */
   checkBrowserForSlideShow(index) {
-    const userAgent = window.navigator.userAgent;
+    const userAgent = navigator.userAgent;
+    let isIphone = (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i));
+
     let isSafari = /constructor/i.test(window.HTMLElement) ||
         (function (p) {
           return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] ||
             /* eslint-disable-next-line */
-            (typeof safari !== 'undefined' && safari.pushNotification) ||
-              userAgent.match(/iPad/i) || userAgent.match(/iPhone/i));
+            (typeof safari !== 'undefined' && safari.pushNotification));
 
-    if (!isSafari) {
+    /* we have the inner conditionals for mobile slide-shows */
+    if (!(isSafari || isIphone)) {
       if (index === 1) {
         return <CrossFadeImage src={this.state.images[this.state.index1]}/>
       } else {
@@ -170,7 +172,7 @@ class App extends React.Component {
           {/* mobile bg */}
           <Responsive maxWidth={768}>
             <style>{'body { background-color: rgba(244, 244, 244, 1) }'}</style>
-            <style>{'body { background: url(/images/rome-cover.JPG) no-repeat center center fixed; }'}</style>
+            <style>{'body { background: url(/images/rome-cover.JPG) no-repeat top center fixed; }'}</style>
             <style>{'body { background-size: fill; }'}</style>
             <div style={mobileLogo}>
               <Grid verticalAlign='middle' container centered>
