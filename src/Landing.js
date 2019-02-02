@@ -69,6 +69,7 @@ class Landing extends React.Component {
         this.state.index2 === this.state.images.length - 1) {
       this.setState({
         index1: 0,
+        index2: 0,
       });
     } else {
       this.setState(prevState => ({
