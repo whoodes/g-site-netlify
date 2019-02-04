@@ -8,14 +8,15 @@ class WorkExperience extends React.Component {
     const MainContainerStyle = {
       marginTop: '64px',
       marginBottom: '32vh',
+      paddingRight: '20px',
     }
 
     return (
         <div>
           <style>{'body { background-color: lightgrey }'}</style>
-          <Grid container verticalAlign='middle'>
+          <Grid container >
             <Container>
-              <Grid verticalAlign='middle' container centered style={MainContainerStyle} columns={4}>
+              <Grid container style={MainContainerStyle} >
                 <Grid.Row centered>
                   <Grid.Column width={14}>
                     <Card.Group>
