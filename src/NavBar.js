@@ -29,6 +29,13 @@ class NavBar extends React.Component {
     const logoStyle = {
       marginTop: '10px',
     }
+
+    const ModalStyle = {
+      marginTop: 'auto !important',
+      display: 'inline-block !important',
+      top: '20%',
+    }
+
     const { open1, open2, dimmer } = this.state
     return (
         <div>
@@ -55,7 +62,7 @@ class NavBar extends React.Component {
               </Menu.Item>
             </Menu>
 
-            <Modal dimmer={dimmer} open={open1} onClose={this.close1} centered={false} closeIcon>
+            <Modal style={ModalStyle} dimmer={dimmer} open={open1} onClose={this.close1} closeIcon>
               <Modal.Header>Preventive Maintenance</Modal.Header>
               <Modal.Content>
                 <Modal.Description>
@@ -67,7 +74,7 @@ class NavBar extends React.Component {
               </Modal.Content>
             </Modal>
 
-            <Modal dimmer={dimmer} open={open2} onClose={this.close2} centered={false} closeIcon>
+            <Modal style={ModalStyle} dimmer={dimmer} open={open2} onClose={this.close2} closeIcon>
               <Modal.Header>Consulting</Modal.Header>
               <Modal.Content>
                 <Modal.Description>

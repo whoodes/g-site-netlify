@@ -10,7 +10,7 @@ class FacilitiesManager extends React.Component {
     }
     return (
         <div>
-          <style>{'body { background-color: grey }'}</style>
+          <style>{'body { background-color: lightgrey }'}</style>
           <Container style={ContainerStyle}>
             <Card fluid>
               <Card.Content>

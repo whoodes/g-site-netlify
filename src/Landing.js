@@ -1,7 +1,6 @@
 import React from 'react';
 import CrossFadeImage from './CrossFade';
 import { Container, Grid, Image, Responsive, Segment, List } from 'semantic-ui-react';
-import NavBar from './NavBar';
 
 class Landing extends React.Component {
   constructor(props) {

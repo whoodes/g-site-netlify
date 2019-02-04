@@ -12,7 +12,7 @@ class WorkExperience extends React.Component {
 
     return (
         <div>
-          <style>{'body { background-color: grey }'}</style>
+          <style>{'body { background-color: lightgrey }'}</style>
           <Grid container verticalAlign='middle'>
             <Container>
               <Grid verticalAlign='middle' container centered style={MainContainerStyle} columns={4}>
@@ -36,9 +36,14 @@ class WorkExperience extends React.Component {
                         </Card.Content>
                         <Card.Content extra>
                           <Container textAlign='center'>
-                            <Button size='small' as={NavLink} activeClassName="" exact to="/Experience/Owner">
-                              <Icon name='wrench' size='large'/>
-                              Learn More
+                            <Button color='blue'
+                                    size='small'
+                                    as={NavLink}
+                                    activeClassName=""
+                                    exact to="/Experience/Owner">
+                              <Icon name='wrench'
+                                    size='large'/>
+                                    Learn More
                             </Button>
                           </Container>
                         </Card.Content>
@@ -60,8 +65,13 @@ class WorkExperience extends React.Component {
                         </Card.Content>
                         <Card.Content extra>
                           <Container textAlign='center'>
-                            <Button size='small' as={NavLink} activeClassName="" exact to="/Experience/FacilitiesManager">
-                              <Icon name='wrench' size='large'/>
+                            <Button color='blue'
+                                    size='small'
+                                    as={NavLink}
+                                    activeClassName=""
+                                    exact to="/Experience/Owner">
+                              <Icon name='wrench'
+                                    size='large'/>
                               Learn More
                             </Button>
                           </Container>
@@ -84,8 +94,13 @@ class WorkExperience extends React.Component {
                         </Card.Content>
                         <Card.Content extra>
                           <Container textAlign='center'>
-                            <Button size='small' as={NavLink} activeClassName="" exact to="/Experience/MaintenanceLead">
-                              <Icon name='wrench' size='large'/>
+                            <Button color='blue'
+                                    size='small'
+                                    as={NavLink}
+                                    activeClassName=""
+                                    exact to="/Experience/Owner">
+                              <Icon name='wrench'
+                                    size='large'/>
                               Learn More
                             </Button>
                           </Container>
@@ -130,8 +145,13 @@ class WorkExperience extends React.Component {
                         </Card.Content>
                         <Card.Content extra>
                           <Container textAlign='center'>
-                            <Button size='small' as={NavLink} activeClassName="" exact to="/Experience/JourneyMan">
-                              <Icon name='wrench' size='large'/>
+                            <Button color='blue'
+                                    size='small'
+                                    as={NavLink}
+                                    activeClassName=""
+                                    exact to="/Experience/Owner">
+                              <Icon name='wrench'
+                                    size='large'/>
                               Learn More
                             </Button>
                           </Container>
@@ -154,8 +174,13 @@ class WorkExperience extends React.Component {
                         </Card.Content>
                         <Card.Content extra>
                           <Container textAlign='center'>
-                            <Button size='small' as={NavLink} activeClassName="" exact to="/Experience/JourneyMan">
-                              <Icon name='wrench' size='large'/>
+                            <Button color='blue'
+                                    size='small'
+                                    as={NavLink}
+                                    activeClassName=""
+                                    exact to="/Experience/Owner">
+                              <Icon name='wrench'
+                                    size='large'/>
                               Learn More
                             </Button>
                           </Container>
@@ -205,8 +230,13 @@ class WorkExperience extends React.Component {
                         </Card.Content>
                         <Card.Content extra>
                           <Container textAlign='center'>
-                            <Button size='small' as={NavLink} activeClassName="" exact to="/Experience/Supervisor">
-                              <Icon name='wrench' size='large'/>
+                            <Button color='blue'
+                                    size='small'
+                                    as={NavLink}
+                                    activeClassName=""
+                                    exact to="/Experience/Owner">
+                              <Icon name='wrench'
+                                    size='large'/>
                               Learn More
                             </Button>
                           </Container>
