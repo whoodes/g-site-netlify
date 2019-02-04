@@ -90,8 +90,7 @@ class Landing extends React.Component {
 
     let isSafari = /constructor/i.test(window.HTMLElement) ||
         (function (p) {
-          return p.toString() === "[object SafariRemoteNotification]";
-        })(!window['safari'] ||
+          return p.toString() === "[object SafariRemoteNotification]";})(!window['safari'] ||
             /* eslint-disable-next-line */
             (typeof safari !== 'undefined' && safari.pushNotification));
 

@@ -34,7 +34,7 @@ class NavBar extends React.Component {
               <Menu.Item as={NavLink} activeClassName="" exact to="/">
                 <strong>Consulting</strong>
               </Menu.Item>
-              <Menu.Item as={NavLink} activeClassName="" exact to="/">
+              <Menu.Item as={NavLink} activeClassName="" exact to="/BioLanding">
                 <strong>About</strong>
               </Menu.Item>
               <Menu.Item as={NavLink} activeClassName="" exact to="/" position='right'>

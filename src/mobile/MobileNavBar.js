@@ -27,7 +27,7 @@ class MobileNavBar extends React.Component {
                     </Dropdown.Item>
                     <Dropdown.Item>Preventative Maintenance</Dropdown.Item>
                     <Dropdown.Item>Consulting Services</Dropdown.Item>
-                    <Dropdown.Item>About</Dropdown.Item>
+                    <Dropdown.Item as={NavLink} activeClassName="" exact to="/BioLanding">About</Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
               </Menu.Item>

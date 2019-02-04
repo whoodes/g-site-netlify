@@ -10,6 +10,7 @@ import Owner from './Experience/Owner';
 import JourneyMan from './Experience/JourneyMan';
 import SuperIntendent from './Experience/SuperIntendent';
 import Supervisor from './Experience/Supervisor';
+import BioLanding from './BioLanding';
 
 /** A simple static component to render some text for the landing page. */
 class App extends React.Component {
@@ -27,6 +28,7 @@ class App extends React.Component {
               <Route exact path="/Experience/JourneyMan" component={JourneyMan}/>
               <Route exact path="/Experience/SuperIntendent" component={SuperIntendent}/>
               <Route exact path="/Experience/Supervisor" component={Supervisor}/>
+              <Route exact path="/BioLanding" component={BioLanding}/>
             </Switch>
             <Footer/>
           </div>
