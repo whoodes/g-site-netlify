@@ -68,8 +68,8 @@ class BioLanding extends React.Component {
                         teenager he began working full-time and started surfing competitively.
                         <br/>
                         <br/>
-                        In 1990 Hunter along with his new wife came to O’ahu for their honeymoon. Later
-                        on, while looking for a better way of life away from the giant cities and pollution,
+                        In 1990 Hunter and his wife came to O’ahu for their honeymoon. Later
+                        on, while looking for a better way of life, one away from the giant cities and pollution,
                         they decided to settle down and start a family right here in Hawaii. This was a new,
                         exciting beginning and he was determined to succeed.
                         <br/>

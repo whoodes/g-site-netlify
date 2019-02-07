@@ -25,7 +25,7 @@ class Footer extends React.Component {
       paddingBottom: '20px',
     };
 
-    const email = 'hunterg@hawaiiantel.net';
+    const email = 'gman@dynamicwaterandpowersolutions.com';
 
     return (
         <div>

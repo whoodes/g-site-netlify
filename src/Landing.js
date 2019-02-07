@@ -51,25 +51,22 @@ class Landing extends React.Component {
         '/images/IMG_4464.jpeg',
         '/images/IMG_1916.jpeg',
       ],
-      index1: Math.floor(Math.random() * 30),
-      index2: Math.floor(Math.random() * 30),
+      index1: Math.floor(Math.random() * 30) + 10,
+      index2: Math.floor(Math.random() * 10),
     };
   }
 
   setRandomIndex() {
     this.setState({
-      index1: Math.floor(Math.random() * 30),
-      index2: Math.floor(Math.random() * 30),
+      index1: Math.floor(Math.random() * 30) + 10,
+      index2: Math.floor(Math.random() * 10),
     })
   }
 
   imageChange() {
-    if (this.state.index1 === this.state.images.length - 1 |
+    if (this.state.index1 === this.state.images.length - 1 ||
         this.state.index2 === this.state.images.length - 1) {
-      this.setState({
-        index1: 0,
-        index2: 0,
-      });
+      this.setRandomIndex()
     } else {
       this.setState(prevState => ({
         index1: prevState.index1 + 1,
@@ -82,7 +79,9 @@ class Landing extends React.Component {
     this.interval = setInterval(() => this.imageChange(), 2500);
   }
 
-  /* Unfortunately, safari doesn't like certain node modules */
+  /* Unfortunately, safari doesn't like certain node modules
+     namely the cross-fade image causes bugs for both desktop
+     and ios. */
   checkBrowserForSlideShow(index) {
     const userAgent = navigator.userAgent;
     let isIphone = (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i));
@@ -94,6 +93,7 @@ class Landing extends React.Component {
             (typeof safari !== 'undefined' && safari.pushNotification));
 
     /* we have the inner conditionals for mobile slide-shows */
+    /* this is kind of ugly, but it is what it is */
     if (!(isSafari || isIphone)) {
       if (index === 1) {
         return <CrossFadeImage src={this.state.images[this.state.index1]}/>
@@ -114,34 +114,23 @@ class Landing extends React.Component {
   }
 
   render() {
+
+    /* desktop styles */
     const logoStyle = {
       marginTop: '64px',
       marginBottom: '600px',
       paddingBottom: '16px',
       backgroundColor: 'white',
       opacity: '0.6',
-    };
+    }
 
     const gridStyle = {
       paddingTop: '40px',
-    };
-
-    const mobileGridStyle = {
-      paddingBottom: '40px',
-    };
+    }
 
     const imageContainer = {
       width: '100%',
-    };
-
-    const mobileLogo = {
-      height: '324px',
-      backgroundColor: 'white',
-      opacity: '0.6',
-      marginTop: '64px',
-      marginBottom: '400px',
-      paddingBottom: '16px',
-    };
+    }
 
     const bg_bar = {
       background: '#1B1C1D',
@@ -150,6 +139,11 @@ class Landing extends React.Component {
       marginBottom: '0',
     }
 
+    const image_bg_bar = {
+      background: '#1B1C1D'
+    }
+
+    /* mobile styles */
     const mobile_bg_bar = {
       background: '#1B1C1D',
       height: '400px',
@@ -158,8 +152,17 @@ class Landing extends React.Component {
       marginBottom: '0',
     }
 
-    const image_bg_bar = {
-      background: '#1B1C1D'
+    const mobileLogo = {
+      height: '324px',
+      backgroundColor: 'white',
+      opacity: '0.6',
+      marginTop: '64px',
+      marginBottom: '400px',
+      paddingBottom: '16px',
+    }
+
+    const mobileGridStyle = {
+      paddingBottom: '40px',
     }
 
     return (

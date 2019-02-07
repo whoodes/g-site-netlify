@@ -8,18 +8,18 @@ class WorkExperience extends React.Component {
     const MainContainerStyle = {
       marginTop: '64px',
       marginBottom: '32vh',
-      paddingRight: '20px',
+      paddingLeft: '6px',
     }
 
     return (
         <div>
           <style>{'body { background-color: lightgrey }'}</style>
           <Grid container >
-            <Container>
+            <Container fluid>
               <Grid container style={MainContainerStyle} >
                 <Grid.Row centered>
                   <Grid.Column width={14}>
-                    <Card.Group>
+                    <Card.Group centered>
                       <Card>
                         <Card.Content>
                           <Image floated='right' size='mini' src='/images/logo.svg'/>
