@@ -8,13 +8,12 @@ class WorkExperience extends React.Component {
     const MainContainerStyle = {
       marginTop: '64px',
       marginBottom: '32vh',
-      paddingLeft: '6px',
     }
 
     return (
         <div>
           <style>{'body { background-color: lightgrey }'}</style>
-          <Grid container >
+          <Grid>
             <Container fluid>
               <Grid container style={MainContainerStyle} >
                 <Grid.Row centered>
