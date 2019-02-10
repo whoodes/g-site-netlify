@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Image, Container, Header, Card, Icon, Responsive } from 'semantic-ui-react'
+import { Grid, Image, Container, Card, Icon, Responsive } from 'semantic-ui-react'
 
 class MobileBio extends React.Component {
   constructor(props) {
@@ -14,7 +14,6 @@ class MobileBio extends React.Component {
   handleHide = () => this.setState({ active: false })
 
   render() {
-    const { active } = this.state
     const ContainerStyle = {
       marginTop: '64px',
       marginBottom: '64vh',
@@ -22,13 +21,6 @@ class MobileBio extends React.Component {
     const ImageStyle = {
       width: '212px',
     }
-    const content = (
-        <div>
-          <Header as='h2' inverted>
-            Greg Hunter
-          </Header>
-        </div>
-    )
 
     return (
         <div>

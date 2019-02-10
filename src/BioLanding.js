@@ -1,6 +1,5 @@
 import React from 'react'
-import { Grid, Image, Container, Button, Header, Dimmer, Card, Icon, Responsive } from 'semantic-ui-react'
-import { NavLink } from 'react-router-dom';
+import { Grid, Image, Container, Header, Dimmer, Card, Icon, Responsive } from 'semantic-ui-react'
 import MobileBio from './mobile/MobileBio'
 
 class BioLanding extends React.Component {

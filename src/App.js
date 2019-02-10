@@ -11,6 +11,8 @@ import JourneyMan from './Experience/JourneyMan';
 import SuperIntendent from './Experience/SuperIntendent';
 import Supervisor from './Experience/Supervisor';
 import BioLanding from './BioLanding';
+import Testimonials from './Testimonials';
+import PemTestimonial from './PemTestimonial';
 
 /** A simple static component to render some text for the landing page. */
 class App extends React.Component {
@@ -29,6 +31,8 @@ class App extends React.Component {
               <Route exact path="/Experience/SuperIntendent" component={SuperIntendent}/>
               <Route exact path="/Experience/Supervisor" component={Supervisor}/>
               <Route exact path="/BioLanding" component={BioLanding}/>
+              <Route exact path="/Testimonials" component={Testimonials}/>
+              <Route exact path="/PemTestimonial" component={PemTestimonial}/>
             </Switch>
             <Footer/>
           </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Icon, Image, Responsive, Menu, Dropdown, Modal, Button } from 'semantic-ui-react';
+import { Icon, Image, Responsive, Menu, Dropdown, Modal } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
 
 class MobileNavBar extends React.Component {
@@ -49,6 +49,7 @@ class MobileNavBar extends React.Component {
                     </Dropdown.Item>
                     <Dropdown.Item onClick={this.show1('blurring')}>Preventative Maintenance</Dropdown.Item>
                     <Dropdown.Item onClick={this.show2('blurring')}>Consulting Services</Dropdown.Item>
+                    <Dropdown.Item as={NavLink} activeClassName="" exact to="/Testimonials">Testimonials</Dropdown.Item>
                     <Dropdown.Item as={NavLink} activeClassName="" exact to="/BioLanding">About</Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>

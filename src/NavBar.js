@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu, Responsive, Image, Button, Modal, Header } from 'semantic-ui-react';
+import { Menu, Responsive, Image, Modal } from 'semantic-ui-react';
 import MobileNavBar from './mobile/MobileNavBar'
 import { NavLink } from 'react-router-dom';
 
@@ -26,10 +26,6 @@ class NavBar extends React.Component {
       paddingRight: '4px'
     };
 
-    const logoStyle = {
-      marginTop: '10px',
-    }
-
     const ModalStyle = {
       marginTop: 'auto !important',
       display: 'inline-block !important',
@@ -53,6 +49,9 @@ class NavBar extends React.Component {
               </Menu.Item>
               <Menu.Item onClick={this.show2('blurring')}>
                 <strong>Consulting</strong>
+              </Menu.Item>
+              <Menu.Item as={NavLink} activeClassName="" exact to="/Testimonials">
+                <strong>Testimonials</strong>
               </Menu.Item>
               <Menu.Item as={NavLink} activeClassName="" exact to="/BioLanding">
                 <strong>About</strong>

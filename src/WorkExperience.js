@@ -1,7 +1,6 @@
 import React from 'react'
-import { Button, Card, Image, Container, Grid, Icon, Menu, Responsive } from 'semantic-ui-react'
+import { Button, Card, Image, Container, Grid, Icon } from 'semantic-ui-react'
 import { NavLink } from 'react-router-dom';
-import { Dropdown } from 'semantic-ui-react/dist/commonjs/modules/Dropdown/Dropdown';
 
 class WorkExperience extends React.Component {
   render() {
@@ -12,6 +11,7 @@ class WorkExperience extends React.Component {
 
     return (
         <div>
+          {/* TODO: there is some weird bug now that allows the window to resize outward */}
           <style>{'body { background-color: lightgrey }'}</style>
           <Grid>
             <Container fluid>
