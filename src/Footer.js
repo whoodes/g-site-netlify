@@ -4,6 +4,12 @@ import { Button, Grid, Responsive } from 'semantic-ui-react';
 /** The Footer appears at the bottom of every page. Rendered by the App Layout component. */
 class Footer extends React.Component {
   render() {
+    const socialStyle = { marginTop: '64px', };
+    const mobileSocialStyle = {
+      paddingTop: '8px',
+      paddingBottom: '20px',
+    };
+
     const divStyle = {
       backgroundColor: '#1B1C1D',
       height: '256px',
@@ -14,15 +20,6 @@ class Footer extends React.Component {
       backgroundColor: '#1B1C1D',
       height: '200x',
       paddingTop: '32px',
-    };
-
-    const socialStyle = {
-      marginTop: '64px',
-    };
-
-    const mobileSocialStyle = {
-      paddingTop: '8px',
-      paddingBottom: '20px',
     };
 
     const email = 'gman@dynamicwaterandpowersolutions.com';

@@ -34,7 +34,12 @@ class FacilitiesManager extends React.Component {
               </Card.Content>
               <Card.Content extra>
                 <Container textAlign='center'>
-                  <Button color='blue' icon labelPosition='left' as={NavLink} activeClassName="" exact to="/WorkExperience">
+                  <Button color='blue'
+                          icon
+                          labelPosition='left'
+                          as={NavLink}
+                          activeClassName=""
+                          exact to="/WorkExperience">
                     <Icon name='check' size='large' />
                     Back to Work Experience
                   </Button>

@@ -61,7 +61,12 @@ class NavBar extends React.Component {
               </Menu.Item>
             </Menu>
 
-            <Modal style={ModalStyle} dimmer={dimmer} open={open1} onClose={this.close1} closeIcon>
+            <Modal
+                style={ModalStyle}
+                dimmer={dimmer}
+                open={open1}
+                onClose={this.close1}
+                closeIcon>
               <Modal.Header>Preventive Maintenance</Modal.Header>
               <Modal.Content>
                 <Modal.Description>
@@ -73,7 +78,12 @@ class NavBar extends React.Component {
               </Modal.Content>
             </Modal>
 
-            <Modal style={ModalStyle} dimmer={dimmer} open={open2} onClose={this.close2} closeIcon>
+            <Modal
+                style={ModalStyle}
+                dimmer={dimmer}
+                open={open2}
+                onClose={this.close2}
+                closeIcon>
               <Modal.Header>Consulting</Modal.Header>
               <Modal.Content>
                 <Modal.Description>

@@ -124,14 +124,9 @@ class Landing extends React.Component {
       opacity: '0.6',
     }
 
-    const gridStyle = {
-      paddingTop: '40px',
-    }
-
-    const imageContainer = {
-      width: '100%',
-    }
-
+    const gridStyle = { paddingTop: '40px', }
+    const imageContainer = { width: '100%', }
+    const image_bg_bar = { background: '#1B1C1D', }
     const bg_bar = {
       background: '#1B1C1D',
       height: '340px',
@@ -139,11 +134,8 @@ class Landing extends React.Component {
       marginBottom: '0',
     }
 
-    const image_bg_bar = {
-      background: '#1B1C1D'
-    }
-
     /* mobile styles */
+    const mobileGridStyle = { paddingBottom: '40px', }
     const mobile_bg_bar = {
       background: '#1B1C1D',
       height: '400px',
@@ -159,10 +151,6 @@ class Landing extends React.Component {
       marginTop: '64px',
       marginBottom: '400px',
       paddingBottom: '16px',
-    }
-
-    const mobileGridStyle = {
-      paddingBottom: '40px',
     }
 
     return (

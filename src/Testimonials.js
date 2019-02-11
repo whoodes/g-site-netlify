@@ -16,7 +16,9 @@ class Testimonials extends React.Component {
               <Grid.Row>
                 <Grid.Column>
                   <Card centered
-                        as={NavLink} activeClassName="" exact to="/PemTestimonial"
+                        as={NavLink}
+                        activeClassName=""
+                        exact to="/PemTestimonial"
                         color='yellow'
                         fluid>
                     <Card.Content textAlign='center'>
