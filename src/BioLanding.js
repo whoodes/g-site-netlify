@@ -33,6 +33,7 @@ class BioLanding extends React.Component {
 
     return (
         <div>
+          <style>{'body { background-color: lightgrey }'}</style>
           <MobileBio/>
           <Responsive minWidth={768}>
             <Grid style={ContainerStyle} container>

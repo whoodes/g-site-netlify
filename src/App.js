@@ -13,7 +13,9 @@ import SuperIntendent from './Experience/SuperIntendent';
 import Supervisor from './Experience/Supervisor';
 import BioLanding from './BioLanding';
 import Testimonials from './Testimonials';
-import PemTestimonial from './PemTestimonial';
+import PemTestimonial from './Testimonials/PemTestimonial';
+import WaiTestimonial from './Testimonials/WaiTestimonial';
+import AgtechTestimonial from './Testimonials/AgtechTestimonial';
 
 /** A simple static component to render some text for the landing page. */
 class App extends React.Component {
@@ -54,6 +56,8 @@ class App extends React.Component {
               <Route exact path="/BioLanding" component={BioLanding}/>
               <Route exact path="/Testimonials" component={Testimonials}/>
               <Route exact path="/PemTestimonial" component={PemTestimonial}/>
+              <Route exact path="/WaiTestimonial" component={WaiTestimonial}/>
+              <Route exact path="/AgtechTestimonial" component={AgtechTestimonial}/>
             </Switch>
             <Footer/>
           </div>

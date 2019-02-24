@@ -26,7 +26,47 @@ class Testimonials extends React.Component {
                     </Card.Content>
                     <Card.Content textAlign='center'>
                       <Card.Meta>Letter</Card.Meta>
-                      <Card.Description>Attesting to Greg Hunter's expertise in the electrical trades</Card.Description>
+                      <Card.Description>Attesting to Greg Hunter's Expertise in the Electrical Trades</Card.Description>
+                    </Card.Content>
+                    <Card.Content extra>
+                      <Container textAlign='center'>
+                        <Icon name='newspaper outline'/>
+                      </Container>
+                    </Card.Content>
+                  </Card>
+
+                  <Card centered
+                        as={NavLink}
+                        activeClassName=""
+                        exact to="/WaiTestimonial"
+                        color='yellow'
+                        fluid>
+                    <Card.Content textAlign='center'>
+                      <Card.Header>Wai Engineering Inc.</Card.Header>
+                    </Card.Content>
+                    <Card.Content textAlign='center'>
+                      <Card.Meta>Letter</Card.Meta>
+                      <Card.Description>Affirming Greg Hunter's Experience - Agricultural Projects</Card.Description>
+                    </Card.Content>
+                    <Card.Content extra>
+                      <Container textAlign='center'>
+                        <Icon name='newspaper outline'/>
+                      </Container>
+                    </Card.Content>
+                  </Card>
+
+                  <Card centered
+                        as={NavLink}
+                        activeClassName=""
+                        exact to="/AgtechTestimonial"
+                        color='yellow'
+                        fluid>
+                    <Card.Content textAlign='center'>
+                      <Card.Header>AgTech Pacific</Card.Header>
+                    </Card.Content>
+                    <Card.Content textAlign='center'>
+                      <Card.Meta>Letter</Card.Meta>
+                      <Card.Description>Greg Hunter, a Testimony</Card.Description>
                     </Card.Content>
                     <Card.Content extra>
                       <Container textAlign='center'>
