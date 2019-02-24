@@ -5,7 +5,7 @@ class PemTestimonial extends React.Component {
   render() {
     const Gridstyle = {
       marginTop: '32px',
-      marginBottom: '32px',
+      marginBottom: '26vh',
     }
     return (
         <Grid style={Gridstyle} container>
