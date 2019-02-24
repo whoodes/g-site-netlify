@@ -69,7 +69,7 @@ class WorkExperience extends React.Component {
                                     size='small'
                                     as={NavLink}
                                     activeClassName=""
-                                    exact to="/Experience/Owner">
+                                    exact to="/Experience/FacilitiesManager">
                               <Icon name='wrench'
                                     size='large'/>
                               Learn More
@@ -98,7 +98,7 @@ class WorkExperience extends React.Component {
                                     size='small'
                                     as={NavLink}
                                     activeClassName=""
-                                    exact to="/Experience/Owner">
+                                    exact to="/Experience/MaintenanceLead">
                               <Icon name='wrench'
                                     size='large'/>
                               Learn More
@@ -133,7 +133,7 @@ class WorkExperience extends React.Component {
                           <Image floated='right' size='mini' src='/images/logo.svg'/>
                           <Card.Header>
                             Journeyman Electrician
-                            <h4><br/>Electro Mechanical Inc</h4>
+                            <h4><br/>Pacific Electro-Mechanical Inc</h4>
                           </Card.Header>
                           <Card.Meta>1994-2008</Card.Meta>
                           <Card.Description>
@@ -149,7 +149,7 @@ class WorkExperience extends React.Component {
                                     size='small'
                                     as={NavLink}
                                     activeClassName=""
-                                    exact to="/Experience/Owner">
+                                    exact to="/Experience/JourneyMan">
                               <Icon name='wrench'
                                     size='large'/>
                               Learn More
@@ -178,7 +178,7 @@ class WorkExperience extends React.Component {
                                     size='small'
                                     as={NavLink}
                                     activeClassName=""
-                                    exact to="/Experience/Owner">
+                                    exact to="/Experience/SuperIntendent">
                               <Icon name='wrench'
                                     size='large'/>
                               Learn More
@@ -221,7 +221,7 @@ class WorkExperience extends React.Component {
                             <h4><br/>Reynolds Industry Inc.</h4>
                           </Card.Header>
                           <Card.Meta>1981 - 1992</Card.Meta>
-                          <Card.Description textAlign='center'>
+                          <Card.Description>
                             I worked as a Machinist running lathes that utilized Numerical Controls to automate the
                             machines. Including set ups, sharping of all my own tools and later I started programming Computerized
                             Numerical Controls machines in the Aerospace Industry. Six years later I was promoted to a manager. I
@@ -234,7 +234,7 @@ class WorkExperience extends React.Component {
                                     size='small'
                                     as={NavLink}
                                     activeClassName=""
-                                    exact to="/Experience/Owner">
+                                    exact to="/Experience/Supervisor">
                               <Icon name='wrench'
                                     size='large'/>
                               Learn More

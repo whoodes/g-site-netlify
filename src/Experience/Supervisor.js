@@ -20,7 +20,7 @@ class FacilitiesManager extends React.Component {
                   <h4><br/>Reynolds Industry Inc.</h4>
                 </Card.Header>
                 <Card.Meta>1981 - 1992</Card.Meta>
-                <Card.Description textAlign='center'>
+                <Card.Description>
                   I worked as a Machinist running lathes that utilized Numerical Controls to automate the
                   machines. Including set ups, sharping of all my own tools and later I started programming Computerized
                   Numerical Controls machines in the Aerospace Industry. Six years later I was promoted to a manager. I
